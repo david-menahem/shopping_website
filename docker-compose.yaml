@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      - MYSQL_DATABASE=shopping_service
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=123456
+      - MYSQL_ROOT_PASSWORD=12345678
+    ports:
+      - "3309:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./resources/db-migrations:/docker-entrypoint-initdb.d/
+    command: --default-authentication-plugin=mysql_native_password
+
+  redis:
+    container_name: "redis_shopping_service"
+    image: redis:latest
+    ports:
+      - "6381:6379"
+volumes:
+  mysql-data:
