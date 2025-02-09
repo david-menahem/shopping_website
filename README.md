@@ -38,9 +38,6 @@ Ensure you have the following installed:
    ```
 
 2. Update the OpenAI API key in the configuration file:
-   ```sh
-   export OPENAI_API_KEY=YOUR_API_KEY_HERE
-   ```
 
 3. Build and run the containers:
    ```sh
@@ -76,7 +73,3 @@ OPENAI_API_KEY=<your_openai_api_key>
 - **API Key Requirement:** The OpenAI API key is not included in the config file and must be updated manually.
 - **Database Persistence:** Ensure that MySQL container volumes are properly configured to avoid data loss.
 - **Pre-inserted Items:** The MySQL database includes initial data to populate the store.
-
-## Contributors
-- **Your Name** – [GitHub Profile](https://github.com/david-menahem)
-
